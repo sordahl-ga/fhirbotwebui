@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <img src="wills2.png" height="100%" width="100%">
+    </div>
+    <script>
+        (function () {
+            var div = document.createElement("div");
+            document.getElementsByTagName('body')[0].appendChild(div);
+            div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; bottom: 0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div><iframe width='400px' height='600px' src='https://webchat.botframework.com/embed/NewFHIRBot?s=v_NEx704XOU.cwA.TtU.tipyRLMbG5xKAPqkIQ_TN4oUUn0Bbi-RjNSc-y4jMHI'></iframe></div>";
+
+            document.querySelector('body').addEventListener('click', function (e) {
+                e.target.matches = e.target.matches || e.target.msMatchesSelector;
+                if (e.target.matches('#botTitleBar')) {
+                    var botDiv = document.querySelector('#botDiv');
+                    botDiv.style.height = botDiv.style.height == '600px' ? '38px' : '600px';
+                };
+            });
+        }());
+    </script>
+</body>
+
+</html>

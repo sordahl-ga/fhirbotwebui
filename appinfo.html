@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>HL7 FHIR BOT</h2>
+    <p align="left">
+    <pre>
+    FHIRBot is a conversational chatbot to interact with any FHIR compliant server to obtain or update medical record data using natural
+    conversations and commands.
+
+    The BOT architecture is comprised of a network of services and mirco services, including:  An STU3 FHIR Server 
+    hosted and backed by Microsoft Azure CosmosDB, Microsoft Azure BOT Framework service, a secure skype channel,
+    a secure web channel and Azure AI/Cognitive services (Language Understanding Intelligence Service) to ascertain
+    user intent. A sample data monitor application looking for changes to the FHIR server is also presented.
+    
+    The knolwedge of the FHIR Bot will increase daily as we teach it about new resources.
+
+    The FHIR Bot is presented as an art of the possible solution.  Security measures have been disbaled to allow for public 
+    demonstration.  The data contained or inputed into the system is completely fake any data added should not be related to any real person.
+
+    </pre>
+    </p>
+    <h2>Instructions</h2>
+    <p align="left">
+    <pre>
+            
+    1. Click to Launch the FHIR Data Monitor in a separate browser tab/window or you can launch it on another device: <a href="https://fhirwatchtower.azurewebsites.net" target="_blank">FHIRWatchTower Data Monitor</a>
+       This monitors the FHIR Server for incoming updates and displays trends on weight, pulse, glucose,etc....
+
+    2. Select the patient Dan on the left of the monitor which you will be authenticating as the subject for the bot conversation.
+
+    3. Click to launch the FHIRBot Chat Window <a href="http://fhirbotwebuifree.azurewebsites.net/" target="_blank">FHIRBot</a>
+    
+    4. Start out by entering Hello or using Siri/Cortana to say hello
+
+    5. When prompted enter the PIN code for the patient Dan: 6786376490 you selected to monitor earlier.
+
+    6.	The bot will greet you and you will have about 5 minutes of time to interact with BOT before it times out, qnd 
+        you have to re-enter your PIN Code for security.
+
+    7.	You can enter/say the following:
+            a.	“List doctors in atlanta” (phoenix,Jacksonville,etc…) – Will show a list of providers with addresses and phone numbers.
+                 on your mobile device  you can generally see map or dial number if you touch them in text messages or Web UI
+            b.	“my pulse is X”  - Where X=heart rate in beats/minute.  The Bot Will chart a heart rate into the FHIR Server.
+                You may want to have the fhir watcher window up from step 2 on the side so you can see the HR get charted when it comes in,
+                within 10 seconds or so…The spark line trend will also update.
+            c.	“I weigh Xlbs” or “I weigh Xkg” or I weigh X pounds/kilograms where X= weight in lbs or kg.  The BOT will chart a weight into the FHIR Server.
+               You may want to have the fhir watcher window up from step 2 on the side so they can see the weight get charted when it comes in, within 10 seconds or so…The spark line trend will also update
+            d.	“what is my plan of care” – You will see the latest complete care plan resource contained on the FHIR Server. (Currently patient Dan is the only patient with a careplan)
+            e.	“my blood sugar reading is X” - where X is your blood sugar (e.g. 90)  it will also display your average and estimated A1C
+            f.	“what is my a1c” – Displays last a1c test results or average from glucose readings if no a1c available
+    8.	Repeat the above to show more trending or different responses.
+    9.	When done enter or say Bye this will terminate the current session
+   10. Questions or comments please email: stordahl@microsoft.com
+</pre>
+</p>
+</body>
+</html>
