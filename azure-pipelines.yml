@@ -1,4 +1,9 @@
 # Starter pipeline
+- task: AzureCLI@1
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise(b11ec350-db26-42ae-8e4e-13be2a772b63)'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az container create --resource-group wincoretest --name wctwincorestoado --image mcr.microsoft.com/windows/servercore:1607 --ip-address public --os-type Windows --cpu 2 --memory 3 --dns-name-label wctwincorestoado'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
